@@ -23,17 +23,13 @@ class Links extends Component {
   }
 }
 
-class Login extends Component {
-  render() {
-    return (
-      <div>
-        <Links auth={this.props.auth} />
-        <Container textAlign="center">
-          <h1>Login</h1>
-        </Container>
-      </div>
-    );
-  }
-}
+const Login = props => (
+  <div>
+    <Links auth={props.auth} />
+    <Container textAlign="center">
+      <h1>Login</h1>
+    </Container>
+  </div>
+);
 
 export default Login;
