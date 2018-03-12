@@ -1,7 +1,6 @@
 import history from '../history';
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
-import Auth0Lock from 'auth0-lock';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
@@ -12,19 +11,6 @@ export default class Auth {
     responseType: 'token id_token',
     scope: 'openid',
   });
-
-  // options = {
-  //   auth: {
-  //     audience: `https://${AUTH_CONFIG.domain}/userinfo`,
-  //     redirectUrl: AUTH_CONFIG.callbackUrl,
-  //     responseType: 'token id_token',
-  //     params: {
-  //       scope: 'openid email picture app_metadata user_metadata',
-  //     },
-  //   },
-  // };
-
-  // auth0 = new Auth0Lock(AUTH_CONFIG.clientId, AUTH_CONFIG.domain, this.options);
 
   constructor() {
     this.login = this.login.bind(this);
