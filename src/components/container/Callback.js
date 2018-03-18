@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Dimmer, Loader, Segment } from 'semantic-ui-react';
 
-const Callback = () => (
+export const Callback = () => (
   <Container>
     <Segment>
       <Dimmer active>
@@ -10,5 +10,3 @@ const Callback = () => (
     </Segment>
   </Container>
 );
-
-export default Callback;

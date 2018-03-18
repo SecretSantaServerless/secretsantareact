@@ -2,10 +2,8 @@ import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 
 import Auth from '../Auth/Auth';
-import Login from '../Login/Login';
-import Home from '../Home/Home';
 import history from '../history';
-import Callback from '../Callback/Callback';
+import { Login, Home, Callback } from '../components/container';
 
 const handleAuthentication = ({ location }) => {
   if (/access_token|id_token|error/.test(location.hash)) {
