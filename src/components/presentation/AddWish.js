@@ -12,7 +12,7 @@ const AddWish = ({ dispatch }) => {
       <Input
         placeholder="I want..."
         ref={node => {
-          input = node.inputRef;
+          input = node.inputRef ? node.inputRef : undefined;
         }}
       />
       <Button
